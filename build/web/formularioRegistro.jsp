@@ -25,7 +25,7 @@
                     <input type="email" id="email" class="form-input" name="email" placeholder="Escribe tu email *" required>
                     <input type="password" name="contrasena" id="contrasena" class="form-input" placeholder="Escribe tu contraseña" required >
                     <input type="text" name="field5" class="form-input" placeholder="Escribe tu nick">
-                    <input type="date" name="field6" class="form-input" id="fechanacimiento" >
+                    <input type="date" name="field6" class="form-input" id="fechanacimiento" required >
                     
                     <table >
                         <tr>

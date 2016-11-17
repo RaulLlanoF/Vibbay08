@@ -63,7 +63,7 @@ public final class formularioRegistro_jsp extends org.apache.jasper.runtime.Http
       out.write("                    <input type=\"email\" id=\"email\" class=\"form-input\" name=\"email\" placeholder=\"Escribe tu email *\" required>\n");
       out.write("                    <input type=\"password\" name=\"contrasena\" id=\"contrasena\" class=\"form-input\" placeholder=\"Escribe tu contraseña\" required >\n");
       out.write("                    <input type=\"text\" name=\"field5\" class=\"form-input\" placeholder=\"Escribe tu nick\">\n");
-      out.write("                    <input type=\"date\" name=\"field6\" class=\"form-input\" id=\"fechanacimiento\" >\n");
+      out.write("                    <input type=\"date\" name=\"field6\" class=\"form-input\" id=\"fechanacimiento\" required >\n");
       out.write("                    \n");
       out.write("                    <table >\n");
       out.write("                        <tr>\n");
