@@ -123,3 +123,19 @@ table {
 {
     background: #109177;
 }
+
+textarea{
+    resize:none;
+    
+}
+
+.imagenUsuario {
+    width: 350px;
+    height: 350px;
+    border: 2px dashed #000000;
+    color: #000000;
+    line-height: 350px;
+    text-align: center;
+    background-size: cover;
+    background-position: 50% 50%;
+}
