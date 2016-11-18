@@ -12,9 +12,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="CSS/formularioRegistroCss.css" >
+        <link href="CSS/indexcss.css" type="text/css" rel="stylesheet">
         <script src="JavaScript/ValidacionRegistro.js" language="javascript" type="text/javascript"></script>
     </head>
     <body>
+        <header>
+        <a href="index.html">
+            <!-- <em><img src="IMG/CoolClips_vc026403.png"/></em>-->
+                <em>Vibbay</em>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="inicioSesion.jsp">Acceder</a></li>
+                   <li><a href="formularioRegistro.jsp">Registrarse</a></li>
+                </ul>
+            </nav>
+        </header>
        
         <div class="form">
             <form action="index.html" method="POST">

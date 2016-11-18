@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link href="CSS/inicioSesionCss.css" type="text/css" rel="stylesheet" >
-        <link href="CSS/indexcss.css" type="text/css" rel="stylesheet">
+        <link href="CSS/cabeceraCss.css" type="text/css" rel="stylesheet">
         <script src="JavaScript/ValidacionInicioSesion.js" language="javascript" type="text/javascript">  </script>
     </head>
     <body>
