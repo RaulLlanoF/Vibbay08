@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="CSS/formularioRegistroCss.css" >
         <link href="CSS/indexcss.css" type="text/css" rel="stylesheet">
         <script src="JavaScript/ValidacionRegistro.js" language="javascript" type="text/javascript"></script>
+        <script  src="JavaScript/BaseDeDatos.js" language="javascript" type="text/javascript"></script>
     </head>
-    <body>
+    <body onload="startDB();">
         <header>
         <a href="index.html">
             <!-- <em><img src="IMG/CoolClips_vc026403.png"/></em>-->
@@ -37,12 +38,11 @@
                     <input type="tel" id="telefono" class="form-input" name="telefono" placeholder="Escribe tu telefono"  required>
                     <input type="email" id="email" class="form-input" name="email" placeholder="Escribe tu email *" required>
                     <input type="password" name="contrasena" id="contrasena" class="form-input" placeholder="Escribe tu contraseña" required >
-                    <input type="text" name="field5" class="form-input" placeholder="Escribe tu nick">
-                    <input type="date" name="field6" class="form-input" id="fechanacimiento" required >
+                    <input type="date" name="fechanacimiento" class="form-input" id="fechanacimiento" required >
                     
                     <table >
                         <tr>
-                            <th><input type="submit" value="Enviar" id="btnRegistro"  /> </th>
+                            <th><input type="submit" value="Enviar" id="btnRegistro" onclick="add();"  /> </th>
                             <th><input type="submit" value="Volver" onclick = "location='index.html'"/></th>
                         </tr>
                     </table>
