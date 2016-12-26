@@ -1,6 +1,6 @@
 <%-- 
-    Document   : listaArticulos
-    Created on : 26-dic-2016, 18:34:05
+    Document   : articulosConDueño
+    Created on : 26-dic-2016, 18:37:36
     Author     : Raúl
 --%>
 
@@ -10,8 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/cabeceraCss.css" rel="stylesheet" type="text/css">
-        <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="JavaScript/paginaListaArticulos.js"></script>
+        <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css"> 
+        <script type="text/javascript" src="JavaScript/paginaArticulosConDueño.js"></script>
         <title>JSP Page</title>
     </head>
     <body>
@@ -22,19 +22,22 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="inicioSesion.jsp">Acceder</a></li>
-                    <li><a href="formularioRegistro.jsp">Registrarse</a></li>
+                    <li><a href="MenuUsuario.jsp">Volver Al Menu</a></li>
+
                 </ul>
             </nav>
         </header>
+
         <div class="form">
             <div id="elements">
                 <table>
-                    <legend><span class="number"></span> Aqui tiene los articulos disponibles en este momento</legend>
+                    <caption>Articulos</caption>
                     <thead>
                         <tr>
                             <th>Nombre Articulo</th>
                             <th>Precio</th>
+                            <th>Descripcion</th>
+                            <th>Categoria</th>
                             <th> </th>
                         </tr>
                     </thead>
@@ -45,17 +48,11 @@
                     </tbody>
                 </table>
             </div>
-            <div class="prueba">
-                <table>
-                    <tr>
-                        <th><button type="button" class="botones" id="btndeporte"  >Categoria deporte</button></th>
-                        <th><button type="button" class="botones" id="btnelectronica"  >Categoria electronica</button></th>
-                        <th> <button type="button" class="botones" id="btnhogar"  >Categoria hogar</button></th>
-                    </tr>
-                </table>
-            </div>
+            <button type="button" class="botones" id="btnordenar" >Ordenar por categoria</button>
         </div>
+
 
 
     </body>
 </html>
+

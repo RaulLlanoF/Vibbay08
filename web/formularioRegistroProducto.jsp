@@ -1,6 +1,6 @@
 <%-- 
     Document   : formularioRegistroProducto
-    Created on : 15-nov-2016, 17:16:03
+    Created on : 26-dic-2016, 18:35:38
     Author     : Raúl
 --%>
 
@@ -13,28 +13,29 @@
         <link rel="stylesheet" href="CSS/formularioRegistroProductoCss.css">
         <script type="text/javascript" src="JavaScript/dragAndDrop1.js"></script>
         <link href="CSS/cabeceraCss.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="JavaScript/paginaRegistroProducto.js"></script>
     </head>
     <body>
         <header>
-        <a href="index.html">
-            <!-- <em><img src="IMG/CoolClips_vc026403.png"/></em>-->
+            <a href="index.jsp">
+                <!-- <em><img src="IMG/CoolClips_vc026403.png"/></em>-->
                 <em>Vibbay</em>
             </a>
             <nav>
                 <ul>
-                    <li><a href="inicioSesion.jsp">Acceder</a></li>
-                   <li><a href="formularioRegistro.jsp">Registrarse</a></li>
+
+                    <li><a href="MenuUsuario.jsp">Volver Al Menu</a></li>
                 </ul>
             </nav>
         </header>
         <div class="form">
-            <form action="index.html">
+            <form action="MenuUsuario.jsp" id="formRegProducto">
                 <fieldset>
                     <legend><span class="number"></span> Formulario de Registro De Articulo</legend>
-                    <input type="text" name="nombreproducto" id="nombreproducto" placeholder="Escribe el nombre del producto" required >
-                    <textarea name="descripcion" id="descripcion" rows="5" placeholder="Escribe la descripcción del producto"></textarea>
-                    <%-- falta decidir como se va a hacer lo de la foto --%>
-                    <p> Seleccione la categoria de su producto</p> <select name="busqueda" id="busqueda" class="form-input" id="busqueda">
+                    <input type="text" name="nombreproducto" id="nombreproducto" class="form-input" placeholder="Escribe el nombre del producto" required >
+                    <textarea name="descripcion" id="descripcion" class="form-input" rows="5" placeholder="Escribe la descripcción del producto"></textarea>
+
+                    <p> Seleccione la categoria de su producto</p> <select name="busqueda" id="categoria" class="form-input" >
                         <option value="Electronica">Electronica</option>
                         <option value="Deporte">Deporte</option>
                         <option value="Hogar">Hogar</option>
@@ -44,8 +45,8 @@
                     <div class="imagenUsuario"   id="caja"></div>
                     <table >
                         <tr>
-                            <th><input type="submit" id="btnRegistroProducto" value="Enviar"  /> </th>
-                            <th><input type="submit"  value="Volver" onclick = "location='index.html'"/></th>
+                            <th><input type="button" id="btnRegistroProducto" value="Enviar"  /> </th>
+                            <th><input type="button"  value="Volver" onclick = "location = 'index.jsp'"/></th>
                         </tr>
                     </table>
                 </fieldset>

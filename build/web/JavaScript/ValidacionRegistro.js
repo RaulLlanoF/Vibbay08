@@ -37,7 +37,8 @@ function revisionGeneral() {
     
     if(correcto){
         document.getElementById("formRegUsuario").submit();
-        alert("11");
+        document.location.href = "index.jsp";
+        //alert("11");
     }
     }
 function revisarEmail () {
@@ -89,7 +90,8 @@ function revisarFecha(){
 }
 function revisar(){
     document.getElementById("btnRegistro").addEventListener("click", revisionGeneral, false);
-    var email = document.getElementById("email");
+    var email = document.getElementById("email");    document.getElementById("btnRegistro").addEventListener("click", revisionGeneral, false);
+
     email.oninput = function() {
         if(!revisarEmail())
             email.className='error';
