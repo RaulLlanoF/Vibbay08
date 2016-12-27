@@ -21,8 +21,9 @@ function revisionGeneral() {
         contrasena.className='error';
     }
     if(correcto){
-        checkData();
-        //document.getElementById("formRegUsuario").submit();
+        //checkData();
+        alert('hola');
+        document.getElementById("formRegUsuario").submit();
         //document.location.href = "http://localhost:8383/HTMLVibbay08/public_html/MenuUsuario.html";
         }
     }
@@ -74,7 +75,7 @@ function saveData(){
         alert("El mail introducido ya esta en uso. Vuelva a intentarlo con otro mail");
 }
 
-function checkData(){
+/*function checkData(){
     
     var mail = document.getElementById("email").value;
     var contrasena = document.getElementById("contrasena").value;
@@ -96,3 +97,4 @@ function checkData(){
     }
     
 }
+*/

@@ -13,11 +13,11 @@
         <link rel="stylesheet" href="CSS/formularioRegistroCss.css" >
         <link href="CSS/indexcss.css" type="text/css" rel="stylesheet">
         
-        
+        <script  src="JavaScript/paginaRegistroUsuario.js" language="javascript" type="text/javascript"></script>
         <!--<script  src="JavaScript/BaseDeDatos.js" language="javascript" type="text/javascript"></script>
         <script  src="JavaScript/localStorage.js" language="javascript" type="text/javascript"></script>
         <script src="JavaScript/ValidacionRegistro.js" language="javascript" type="text/javascript"></script>-->
-        <script  src="JavaScript/paginaRegistroUsuario.js" language="javascript" type="text/javascript"></script>
+        
         
     </head>
     <body >
@@ -35,7 +35,7 @@
         </header>
        
         <div class="form">
-            <form action="index.html" method="POST" id="formRegUsuario">
+            <form action="registrar" method="POST" id="formRegUsuario">
                 <fieldset>
                     <legend><span class="number"></span> Formulario de Registro</legend>
                     <input type="text"  id="nombre" class="form-input" name="nombre" placeholder="Escribe tu nombre" pattern="[A-Za-z]{3,}" required >

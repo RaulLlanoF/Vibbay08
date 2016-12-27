@@ -30,7 +30,7 @@
             </nav>
         </header>
         <div class="form">
-            <form action="MenuUsuario.html" method="POST" id="formRegUsuario">
+            <form action="iniciar" method="POST" id="formRegUsuario">
                 <fieldset>
                     <legend><span class="number"></span> Inicia Sesion</legend>
                     <input type="email" id="email" class="form-input" name="email" placeholder="Escribe tu email *" required>

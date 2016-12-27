@@ -10,7 +10,7 @@ var indexedDB = window.indexedDB || window.webkitIndexedDB;
 var dataBase = null;
 
 function empieza(){
-    startDB();
+   // startDB();
     revisar();
     
 }
@@ -44,8 +44,9 @@ function revisionGeneral() {
     }
     
     if(correcto){
+        //alert("he revisdo ahora el subtmit");
         document.getElementById("formRegUsuario").submit();
-        document.location.href = "index.jsp";
+        //document.location.href = "index.jsp";
         //alert("11");
     }
     }

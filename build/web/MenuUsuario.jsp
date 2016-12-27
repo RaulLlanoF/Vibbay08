@@ -2,9 +2,18 @@
     Document   : MenuUsuario
     Created on : 26-dic-2016, 18:38:48
     Author     : Raúl
+<script type="text/javascript"> var nombreSesion = sessionStorage.getItem("email");document.writeln(nombreSesion);</script>
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+  HttpSession objsesion = request.getSession(false);
+  String email = (String)objsesion.getAttribute("email");
+  if(email.equals("")){
+      response.sendRedirect("index.jsp");
+  }
+  
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +32,7 @@
             <nav>  
                 
                 <ul>
-                    <li>Bienvenido! <script type="text/javascript"> var nombreSesion = sessionStorage.getItem("email");document.writeln(nombreSesion);</script></li>
+                    <li>Bienvenido! <% out.println(email); %></li>
                     <li><button type="button"  id="link" >Cerrar Sesión</button></li>
                    
                    

@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class formularioRegistro_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class inicioSesion_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -49,17 +49,13 @@ public final class formularioRegistro_jsp extends org.apache.jasper.runtime.Http
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
-      out.write("        <link rel=\"stylesheet\" href=\"CSS/formularioRegistroCss.css\" >\n");
-      out.write("        <link href=\"CSS/indexcss.css\" type=\"text/css\" rel=\"stylesheet\">\n");
-      out.write("        \n");
-      out.write("        <!--<script  src=\"JavaScript/paginaRegistroUsuario.js\" language=\"javascript\" type=\"text/javascript\"></script>\n");
-      out.write("        <!--<script  src=\"JavaScript/BaseDeDatos.js\" language=\"javascript\" type=\"text/javascript\"></script>\n");
-      out.write("        <script  src=\"JavaScript/localStorage.js\" language=\"javascript\" type=\"text/javascript\"></script>\n");
-      out.write("        <script src=\"JavaScript/ValidacionRegistro.js\" language=\"javascript\" type=\"text/javascript\"></script>-->\n");
-      out.write("        \n");
-      out.write("        \n");
+      out.write("        <link href=\"CSS/inicioSesionCss.css\" type=\"text/css\" rel=\"stylesheet\" >\n");
+      out.write("        <link href=\"CSS/cabeceraCss.css\" type=\"text/css\" rel=\"stylesheet\">\n");
+      out.write("        <script src=\"JavaScript/ValidacionInicioSesion.js\" language=\"javascript\" type=\"text/javascript\">  </script>\n");
+      out.write("        <!--<script  src=\"JavaScript/BaseDeDatos.js\" language=\"javascript\" type=\"text/javascript\"></script>-->\n");
+      out.write("        <!--<script  src=\"JavaScript/localStorage.js\" language=\"javascript\" type=\"text/javascript\"></script>-->\n");
       out.write("    </head>\n");
-      out.write("    <body >\n");
+      out.write("    <body>\n");
       out.write("        <header>\n");
       out.write("        <a href=\"index.jsp\">\n");
       out.write("            <!-- <em><img src=\"IMG/CoolClips_vc026403.png\"/></em>-->\n");
@@ -67,34 +63,29 @@ public final class formularioRegistro_jsp extends org.apache.jasper.runtime.Http
       out.write("            </a>\n");
       out.write("            <nav>\n");
       out.write("                <ul>\n");
-      out.write("                    <li><a href=\"inicioSesion.html\">Acceder</a></li>\n");
-      out.write("                   <li><a href=\"formularioRegistro.html\">Registrarse</a></li>\n");
+      out.write("                    <li><a href=\"inicioSesion.jsp\">Acceder</a></li>\n");
+      out.write("                   <li><a href=\"formularioRegistro.jsp\">Registrarse</a></li>\n");
       out.write("                </ul>\n");
       out.write("            </nav>\n");
       out.write("        </header>\n");
-      out.write("       \n");
       out.write("        <div class=\"form\">\n");
-      out.write("            <form action=\"registrar\" method=\"POST\" id=\"formRegUsuario\">\n");
+      out.write("            <form action=\"iniciar\" method=\"POST\" id=\"formRegUsuario\">\n");
       out.write("                <fieldset>\n");
-      out.write("                    <legend><span class=\"number\"></span> Formulario de Registro</legend>\n");
-      out.write("                    <input type=\"text\"  id=\"nombre\" class=\"form-input\" name=\"nombre\" placeholder=\"Escribe tu nombre\" pattern=\"[A-Za-z]{3,}\" required >\n");
-      out.write("                    <input type=\"tel\" id=\"telefono\" class=\"form-input\" name=\"telefono\" placeholder=\"Escribe tu telefono\"  required>\n");
+      out.write("                    <legend><span class=\"number\"></span> Inicia Sesion</legend>\n");
       out.write("                    <input type=\"email\" id=\"email\" class=\"form-input\" name=\"email\" placeholder=\"Escribe tu email *\" required>\n");
-      out.write("                    <input type=\"password\" name=\"contrasena\" id=\"contrasena\" class=\"form-input\" placeholder=\"Escribe tu contraseña\" required >\n");
-      out.write("                    <input type=\"date\" name=\"fechanacimiento\" class=\"form-input\" id=\"fechanacimiento\" required >\n");
-      out.write("                    \n");
+      out.write("                    <input type=\"password\" name=\"contrasena\" id=\"contrasena\" class=\"form-input\" placeholder=\"Escribe tu contraseña\" required >                    \n");
       out.write("                    <table >\n");
       out.write("                        <tr>\n");
-      out.write("                            <th><input type=\"submit\" value=\"Enviar\" id=\"btnRegistro\"  /> </th>\n");
+      out.write("                            <th><input type=\"button\" value=\"Enviar\" id=\"btnInicio\"    /> </th>\n");
       out.write("                            <th><input type=\"button\" value=\"Volver\" onclick = \"location='index.jsp'\"/></th>\n");
       out.write("                        </tr>\n");
       out.write("                    </table>\n");
       out.write("                </fieldset>\n");
       out.write("            </form>\n");
       out.write("        </div>\n");
-      out.write("       \n");
       out.write("    </body>\n");
       out.write("</html>\n");
+      out.write("\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
