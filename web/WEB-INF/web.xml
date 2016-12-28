@@ -8,6 +8,10 @@
         <servlet-name>RegistrarUsuarios</servlet-name>
         <servlet-class>Servlet.RegistrarUsuarios</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistarProductos</servlet-name>
+        <servlet-class>Servlet.RegistarProductos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>RegistrarUsuarios</servlet-name>
         <url-pattern>/registrar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistarProductos</servlet-name>
+        <url-pattern>/registrarobjetos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

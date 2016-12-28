@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package Controlador;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.sql.*;
 
 /**
@@ -71,9 +75,44 @@ public class Consultas extends Conexion {
         
         return false;
     }
+    
+    public boolean registrarProducto(String correopropietario, String categoria, String descripcion, String nombreproducto, float precio, InputStream foto ){
+        
+        PreparedStatement pst = null;
+        try {
+            String consulta = "insert into articulo (correopropietario, categoria, descripcion, nombreproducto, precio, foto) values (?,?,?,?,?,?)";
+            pst = getConexion().prepareStatement(consulta);
+            
+            
+            pst.setString(1, correopropietario);
+            pst.setString(2, categoria);
+            pst.setString(3, descripcion);
+            pst.setString(4, nombreproducto);
+            pst.setFloat(5, precio);
+            pst.setBinaryStream(6, foto);
+            if(pst.executeUpdate()== 1){
+                return true;
+                
+            }
+            System.out.println("hola");
+        } catch (Exception ex) {
+            System.err.println("Error" +ex);
+            
+        }finally{
+            try {
+                if(getConexion()!=null) getConexion().close();
+                if(pst!=null) pst.close();
+            } catch (Exception e) {
+                System.err.println("Error"+e);
+            }
+        }
+        return false;
+    }
+    
+   
      public static void main(String[] args) {
         Consultas co = new Consultas();
-        System.out.println(co.registrar("raul@gmail.com", "raul", "1234", null, 696251477));
+        
     }
     
 }

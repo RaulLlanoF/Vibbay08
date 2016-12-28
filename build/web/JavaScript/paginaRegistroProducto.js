@@ -8,12 +8,12 @@ var indexedDB = window.indexedDB || window.webkitIndexedDB;
 var dataBase = null;
 
 function empieza() {
-    startDB();
+    //startDB();
     revisar();
 
 }
 
-function startDB() {
+/*function startDB() {
 
     dataBase = indexedDB.open('Vibbay2', 1);
 
@@ -49,7 +49,9 @@ function startDB() {
 
 
 
+
 }
+*/
 function addProducto() {
     var active = dataBase.result;
     var data = active.transaction(["producto"], "readwrite");
@@ -198,7 +200,7 @@ function revisionGeneral() {
 
     if (correcto) {
         document.getElementById("formRegProducto").submit();
-        document.location.href = "index.jsp";
+        //document.location.href = "index.jsp";
         //alert("11");
     }
 }

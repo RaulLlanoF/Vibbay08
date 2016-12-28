@@ -5,6 +5,14 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+  HttpSession objsesion = request.getSession(false);
+  String email = (String)objsesion.getAttribute("email");
+  if(email.equals("")){
+      response.sendRedirect("index.jsp");
+  }
+  
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,13 +21,14 @@
         <link rel="stylesheet" href="CSS/formularioRegistroProductoCss.css">
         <script type="text/javascript" src="JavaScript/dragAndDrop1.js"></script>
         <link href="CSS/cabeceraCss.css" type="text/css" rel="stylesheet">
-        <script type="text/javascript" src="JavaScript/paginaRegistroProducto.js"></script>
+      <!-- <script type="text/javascript" src="JavaScript/paginaRegistroProducto.js"></script>-->
+      <script type="text/javascript" src="JavaScript/RegistroProducto.js"></script>
     </head>
     <body>
         <header>
             <a href="index.jsp">
                 <!-- <em><img src="IMG/CoolClips_vc026403.png"/></em>-->
-                <em>Vibbay</em>
+                <em>Vibbay <% out.println(email); %></em>
             </a>
             <nav>
                 <ul>
@@ -29,10 +38,11 @@
             </nav>
         </header>
         <div class="form">
-            <form action="MenuUsuario.jsp" id="formRegProducto">
+            <form action="registrarobjetos" id="formRegProducto" enctype="multipart/form-data" method="post">
                 <fieldset>
                     <legend><span class="number"></span> Formulario de Registro De Articulo</legend>
                     <input type="text" name="nombreproducto" id="nombreproducto" class="form-input" placeholder="Escribe el nombre del producto" required >
+                    Foto:<input type="file" name="foto1" id="foto1" class="form-input" >
                     <textarea name="descripcion" id="descripcion" class="form-input" rows="5" placeholder="Escribe la descripcción del producto"></textarea>
 
                     <p> Seleccione la categoria de su producto</p> <select name="busqueda" id="categoria" class="form-input" >
