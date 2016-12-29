@@ -1,29 +1,22 @@
 <%-- 
-    Document   : articulosConDueño
-    Created on : 26-dic-2016, 18:37:36
+    Document   : MostrarPrueba
+    Created on : 29-dic-2016, 12:52:26
     Author     : Raúl
 --%>
 
+
+<%@page import="javax.websocket.Decoder.BinaryStream"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.io.*"%>
 <%@page import="java.util.*"%>
 <%@page import="java.sql.*"%>
 <%@page import="utils.*"%>
 <!DOCTYPE html>
-<%
-  HttpSession objsesion = request.getSession(false);
-  String email = (String)objsesion.getAttribute("email");
-  if(email.equals("")){
-      response.sendRedirect("index.jsp");
-  }
-  
-%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/cabeceraCss.css" rel="stylesheet" type="text/css">
-        <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css"> 
-       <!-- <script type="text/javascript" src="JavaScript/paginaArticulosConDueño.js"></script>-->
+        <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -34,11 +27,13 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="MenuUsuario.jsp">Volver Al Menu</a></li>
-
+                    <li><a href="inicioSesion.jsp">Acceder</a></li>
+                    <li><a href="formularioRegistro.jsp">Registrarse</a></li>
                 </ul>
             </nav>
         </header>
+        
+        <%String categoriaB = request.getParameter("categoria");%>
         <div class="form">
             <div id="elements">
         <table >
@@ -66,7 +61,7 @@
                     Float precio;
                     InputStream foto;
                     set = con.createStatement();
-                    rs = set.executeQuery("SELECT * FROM articulo where correopropietario='"+email+"'");
+                    rs = set.executeQuery("SELECT * FROM articulo where categoria='"+categoriaB+"'");
                     while (rs.next()) {
                         nombreproducto = rs.getString("nombreproducto");
                         categoria = rs.getString("categoria");
@@ -92,9 +87,5 @@
         </table>
             </div>
         </div>
-
-
-
     </body>
 </html>
-

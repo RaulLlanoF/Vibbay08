@@ -1,0 +1,20 @@
+SMAP
+MostrarPrueba_jsp.java
+JSP
+*S JSP
+*F
++ 0 MostrarPrueba.jsp
+MostrarPrueba.jsp
+*L
+5,16:63
+21,2:79,3
+23,4:85
+27,14:15
+40,2:89
+42,9:92
+50:101
+51,2:102,3
+53:108
+54,8:110
+61,5:118
+*E

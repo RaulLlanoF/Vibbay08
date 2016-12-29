@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class listaArticulos_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -47,10 +47,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <title>TODO supply a title</title>\n");
-      out.write("        <meta charset=\"UTF-8\">\n");
-      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-      out.write("        <link href=\"CSS/indexcss.css\" rel=\"stylesheet\" type=\"text/css\">\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <link href=\"CSS/cabeceraCss.css\" rel=\"stylesheet\" type=\"text/css\">\n");
+      out.write("        <link href=\"CSS/listaArticulosCss.css\" rel=\"stylesheet\" type=\"text/css\">\n");
+      out.write("        <script type=\"text/javascript\" src=\"JavaScript/paginaListaArticulos.js\"></script>\n");
+      out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <header>\n");
@@ -59,9 +60,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <em>Vibbay</em>\n");
       out.write("            </a>\n");
       out.write("            <nav>\n");
-      out.write("                <div id=\"emailUsuario\">\n");
-      out.write("                        \n");
-      out.write("                </div>\n");
       out.write("                <ul>\n");
       out.write("                    <li><a href=\"inicioSesion.jsp\">Acceder</a></li>\n");
       out.write("                    <li><a href=\"formularioRegistro.jsp\">Registrarse</a></li>\n");
@@ -69,21 +67,35 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </nav>\n");
       out.write("        </header>\n");
       out.write("        <div class=\"form\">\n");
-      out.write("            <form action=\"MostrarPrueba.jsp\">\n");
-      out.write("                <fieldset>\n");
-      out.write("                    <legend><span class=\"number\"></span> Busque su articulo</legend>\n");
-      out.write("                  <!-- <a href=\"listaArticulos.jsp\" class=\"formate1\"> Pinche aqui para ver todos los articulos a la venta</a> -->\n");
-      out.write("                  Selecione la categoria del producto que desea buscar<select name=\"categoria\" id=\"categoria\" class=\"form-input\" >\n");
-      out.write("                        <option value=\"Electronica\">Electronica</option>\n");
-      out.write("                        <option value=\"Deporte\">Deporte</option>\n");
-      out.write("                        <option value=\"Hogar\">Hogar</option>\n");
-      out.write("                    </select>\n");
-      out.write("                  <input type=\"submit\" value=\"Buscar\">\n");
-      out.write("                    \n");
-      out.write("                </fieldset>\n");
-      out.write("            </form>\n");
-      out.write("\n");
+      out.write("            <div id=\"elements\">\n");
+      out.write("                <table>\n");
+      out.write("                    <legend><span class=\"number\"></span> Aqui tiene los articulos disponibles en este momento</legend>\n");
+      out.write("                    <thead>\n");
+      out.write("                        <tr>\n");
+      out.write("                            <th>Nombre Articulo</th>\n");
+      out.write("                            <th>Precio</th>\n");
+      out.write("                            <th> </th>\n");
+      out.write("                        </tr>\n");
+      out.write("                    </thead>\n");
+      out.write("                    <tbody id=\"elementsList\">\n");
+      out.write("                        <tr>\n");
+      out.write("                            <td colspan=\"3\">Not elements to show</td>\n");
+      out.write("                        </tr>\n");
+      out.write("                    </tbody>\n");
+      out.write("                </table>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"prueba\">\n");
+      out.write("                <table>\n");
+      out.write("                    <tr>\n");
+      out.write("                        <th><button type=\"button\" class=\"botones\" id=\"btndeporte\"  >Categoria deporte</button></th>\n");
+      out.write("                        <th><button type=\"button\" class=\"botones\" id=\"btnelectronica\"  >Categoria electronica</button></th>\n");
+      out.write("                        <th> <button type=\"button\" class=\"botones\" id=\"btnhogar\"  >Categoria hogar</button></th>\n");
+      out.write("                    </tr>\n");
+      out.write("                </table>\n");
+      out.write("            </div>\n");
       out.write("        </div>\n");
+      out.write("\n");
+      out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

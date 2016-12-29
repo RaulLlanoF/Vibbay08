@@ -30,11 +30,16 @@
             </nav>
         </header>
         <div class="form">
-            <form action="listaArticulos.html" method="POST">
+            <form action="MostrarPrueba.jsp">
                 <fieldset>
                     <legend><span class="number"></span> Busque su articulo</legend>
-                    <a href="listaArticulos.jsp" class="formate1"> Pinche aqui para ver todos los articulos a la venta</a>
-                     
+                  <!-- <a href="listaArticulos.jsp" class="formate1"> Pinche aqui para ver todos los articulos a la venta</a> -->
+                  Selecione la categoria del producto que desea buscar<select name="categoria" id="categoria" class="form-input" >
+                        <option value="Electronica">Electronica</option>
+                        <option value="Deporte">Deporte</option>
+                        <option value="Hogar">Hogar</option>
+                    </select>
+                  <input type="submit" value="Buscar">
                     
                 </fieldset>
             </form>
