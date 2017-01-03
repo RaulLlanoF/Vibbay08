@@ -42,6 +42,33 @@ public class Consultas extends Conexion {
         }
         return false;
     }
+    public boolean cancelarSubasta (int id){
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        
+        try {
+            String consulta = "update articulo set situacion ='vendido' where id =?";
+            pst = getConexion().prepareStatement(consulta);
+            pst.setInt(1, id);
+            pst.executeUpdate();
+            
+            if(pst.executeUpdate()==1){
+                return true;
+            }
+        } catch (Exception e) {
+            System.err.println("Error"+e);
+        }finally{
+            try {
+                if(getConexion()!= null) getConexion().close();
+                if(pst != null) pst.close();
+                if(rs != null) rs.close();
+            } catch (Exception e) {
+                System.err.println("Error"+e);
+            }
+        }
+        
+        return false;
+    }
     
     public boolean registrar(String email, String nombre, String contrasena, Date fechanacimiento, int telefono){
         
@@ -90,6 +117,35 @@ public class Consultas extends Conexion {
             pst.setString(4, nombreproducto);
             pst.setFloat(5, precio);
             pst.setBinaryStream(6, foto);
+            if(pst.executeUpdate()== 1){
+                return true;
+                
+            }
+            System.out.println("hola");
+        } catch (Exception ex) {
+            System.err.println("Error" +ex);
+            
+        }finally{
+            try {
+                if(getConexion()!=null) getConexion().close();
+                if(pst!=null) pst.close();
+            } catch (Exception e) {
+                System.err.println("Error"+e);
+            }
+        }
+        return false;
+    }
+    
+    public boolean registrarPuja(int idproducto, float preciopuja, String pujante){
+        PreparedStatement pst = null;
+        try {
+            String consulta = "insert into pujas (idproducto,preciopuja,pujante) values (?,?,?)";
+            pst = getConexion().prepareStatement(consulta);
+            
+            
+            pst.setInt(1, idproducto);
+            pst.setFloat(2, preciopuja);
+            pst.setString(3, pujante);
             if(pst.executeUpdate()== 1){
                 return true;
                 
@@ -171,7 +227,7 @@ public class Consultas extends Conexion {
    
      public static void main(String[] args) {
         Consultas co = new Consultas();
-        
+        co.cancelarSubasta(2);
     }
     
 }

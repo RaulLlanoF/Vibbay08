@@ -16,6 +16,14 @@
         <servlet-name>Busqueda</servlet-name>
         <servlet-class>Servlet.Busqueda</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistrarPuja</servlet-name>
+        <servlet-class>Servlet.RegistrarPuja</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CerrarPuja</servlet-name>
+        <servlet-class>Servlet.CerrarPuja</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>Busqueda</servlet-name>
         <url-pattern>/buscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrarPuja</servlet-name>
+        <url-pattern>/registrarpuja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CerrarPuja</servlet-name>
+        <url-pattern>/cerrarpuja</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

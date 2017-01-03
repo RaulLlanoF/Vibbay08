@@ -29,7 +29,7 @@ function revisar() {
     }
     var precio = document.getElementById("precio");
     precio.oninput = function () {
-        if (revisarPrecio())
+        if (!revisarPrecio())
             precio.className = 'error';
         else
             precio.className = 'form-input';
@@ -51,8 +51,7 @@ function revisionGeneral() {
     }
     var precio = document.getElementById("precio");
     if (!revisarPrecio()) {
-         alert("mal mal");
-       // correcto = false;
+        correcto = false;
         precio.className = 'error';
     }
 
@@ -83,11 +82,23 @@ function revisarDescripcion() {
 
 function revisarPrecio() {
     var precio = document.getElementById("precio");
-    var ex = /^(([1-9]{1}[0-9]{0,2}\.[0-9]{3}\,[0-9]{2})|([0-9]{1,3}\,[0-9]{2}))$/;
+    var ex = /^\d{1,8}(\.+\d{2})?$/;
+    ///^(([1-9]{1}[0-9]{0,2}\.[0-9]{3}\,[0-9]{2})|([0-9]{1,3}\,[0-9]{2}))$/
+    ///^\d+(\.\{1,2})?$/
+    // /^\d{1,2}(\.\d{2})?$/ funciona salvo por el valor entero
     if (!ex.test(precio.value) || precio.value === "")
         return false;
     else
         return true;
 }
 
+function revisarPrecio1(){
+    var precio = document.getElementById("precio");
+    var ex = /^\d{1,2}(\.\d{1,3})?$/;
+    if(ex.test(precio)|| precio!=""){
+        return true;
+    }else{
+        return false;
+    }
+}
 

@@ -42,7 +42,8 @@
         </header>
         <ul class="form">
             <li><a class="profile" href="articulosConDueño.jsp"><i class="icon-user"></i>Mis Productos</a></li>
-        <li ><a class="messages" href="formularioRegistroProducto.jsp">Subastar Objeto</a></li>
+        <li ><a class="messages" href="formularioRegistroProducto.jsp">Subastar Producto</a></li>
+        <li ><a class="messages" href="busquedaRegistrada.jsp">Buscar Productos</a></li>
         
 	
 </ul>

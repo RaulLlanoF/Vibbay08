@@ -1,15 +1,15 @@
 <%-- 
-    Document   : articulosConDueño
-    Created on : 26-dic-2016, 18:37:36
+    Document   : busquedaRegistrada
+    Created on : 03-ene-2017, 12:12:30
     Author     : Raúl
 --%>
 
+<%@page import="javax.websocket.Decoder.BinaryStream"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.io.*"%>
 <%@page import="java.util.*"%>
 <%@page import="java.sql.*"%>
 <%@page import="utils.*"%>
-<!DOCTYPE html>
 <%
   HttpSession objsesion = request.getSession(false);
   String email = (String)objsesion.getAttribute("email");
@@ -18,12 +18,12 @@
   }
   
 %>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/cabeceraCss.css" rel="stylesheet" type="text/css">
-        <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css"> 
-       <!-- <script type="text/javascript" src="JavaScript/paginaArticulosConDueño.js"></script>-->
+        <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -34,15 +34,17 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="MenuUsuario.jsp">Volver Al Menu</a></li>
-
+                    <li>Hola <% out.println(email); %></li>
+                    <li><a href="MenuUsuario.jsp">Volver al Menu</a></li>
                 </ul>
             </nav>
         </header>
+        
+        <%String categoriaB = request.getParameter("categoria");%>
         <div class="form">
             <div id="elements">
         <table >
-            <tr><td><b>Numero Producto</b></td><td><b>Nombre Producto</b></td><td><b>Categoria</b></td><td><b>Descripcion</b></td><td><b>Precio</b></td><td><b>Foto</b></td><td><b>Situacion</b></td></tr>
+            <tr><td><b>Numero&nbsp;Producto&nbsp;&nbsp;&nbsp;</b></td><td><b>Nombre&nbsp;Producto&nbsp;&nbsp;&nbsp;</b></td><td><b>Categoria&nbsp;&nbsp;&nbsp;</b></td><td><b>Descripcion&nbsp;&nbsp;&nbsp;</b></td><td><b>Precio&nbsp;&nbsp;&nbsp;</b></td><td><b>Foto</b></td></tr>
 
             <%!
                 private Connection con;
@@ -61,32 +63,29 @@
             <%
                 try {
                     String nombreproducto;
-                    String situacion;
                     String categoria;
                     String descripcion;
                     Float precio;
                     InputStream foto;
-                    int numero;
-                    
+                    int numeroproducto;
                     set = con.createStatement();
-                    rs = set.executeQuery("SELECT * FROM articulo where correopropietario='"+email+"'");
+                    rs = set.executeQuery("select * from articulo where correopropietario <>'"+email+"' and situacion ='enventa'");
                     while (rs.next()) {
-                        numero = rs.getInt("id");
+                        numeroproducto = rs.getInt("id");
                         nombreproducto = rs.getString("nombreproducto");
                         categoria = rs.getString("categoria");
                         descripcion = rs.getString("descripcion");
                         precio = rs.getFloat("precio");
                         foto = rs.getBinaryStream("foto");
-                        situacion = rs.getString("situacion");
                         
             %>                         
-            <tr><td><%=numero%></td>
+            <tr><td><%=numeroproducto%></td>
                 <td><%=nombreproducto%></td>
                 <td><%=categoria%></td>
                 <td><%=descripcion%></td>
                 <td><%=precio%></td>
-                <td><%=foto%></td>
-                <td><%=situacion%></td></tr>
+                <td><%=foto%></td></tr>
+            
                 <%
                         }
                         rs.close();
@@ -100,10 +99,11 @@
             </div>
         </div>
         <div class="form">
-            <form action="cerrarpuja" method="POST" id="formRegUsuario">
+            <form action="registrarpuja" method="POST" id="formRegUsuario">
                 <fieldset>
-                    <legend><span class="number"></span> Formulario de cierre de puja </legend>
-                    Escribe el numero del producto que deseas cerrar<input type="number"  id="numerodearticulo" class="form-input" name="numerodearticulo" placeholder=""  required ><br> 
+                    <legend><span class="number"></span> Formulario de puja</legend>
+                    Escribe el numero del producto que deseas<input type="number"  id="numerodearticulo" class="form-input" name="numerodearticulo" placeholder=""  required ><br>
+                    Escribe el precio que estas dispuesto a pagar<input type="number" id="puja" class="form-input" name="puja" placeholder=""  required> 
                     <table >
                         <tr>
                             <th><input type="submit" value="Enviar" id="btnRegistro"  /> </th>
@@ -113,9 +113,6 @@
                 </fieldset>
             </form>
         </div>
-
-
-
+        
     </body>
 </html>
-

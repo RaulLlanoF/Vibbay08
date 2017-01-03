@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 ul.form {
-    position:relative;
+    position:absolute;
     background:#109177;
     width:250px;
     margin:auto;

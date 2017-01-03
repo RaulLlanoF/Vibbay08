@@ -42,7 +42,7 @@
         <div class="form">
             <div id="elements">
         <table >
-            <tr><td><b>NombreProducto</b></td><td><b>Categoria</b></td><td><b>Descripcion</b></td><td><b>Precio</b></td><td><b>Foto</b></td></tr>
+            <tr><td><b>Numero Producto</b></td><td><b>Nombre Producto</b></td><td><b>Categoria</b></td><td><b>Descripcion</b></td><td><b>Precio</b></td><td><b>Foto</b></td><td><b>Situacion</b></td></tr>
 
             <%!
                 private Connection con;
@@ -61,25 +61,32 @@
             <%
                 try {
                     String nombreproducto;
+                    String situacion;
                     String categoria;
                     String descripcion;
                     Float precio;
                     InputStream foto;
+                    int numero;
+                    
                     set = con.createStatement();
                     rs = set.executeQuery("SELECT * FROM articulo where correopropietario='"+email+"'");
                     while (rs.next()) {
+                        numero = rs.getInt("id");
                         nombreproducto = rs.getString("nombreproducto");
                         categoria = rs.getString("categoria");
                         descripcion = rs.getString("descripcion");
                         precio = rs.getFloat("precio");
                         foto = rs.getBinaryStream("foto");
+                        situacion = rs.getString("situacion");
                         
             %>                         
-            <tr><td><%=nombreproducto%></td>
+            <tr><td><%=numero%></td>
+                <td><%=nombreproducto%></td>
                 <td><%=categoria%></td>
                 <td><%=descripcion%></td>
                 <td><%=precio%></td>
-                <td><%=foto%></td></tr>
+                <td><%=foto%></td>
+                <td><%=situacion%></td></tr>
                 <%
                         }
                         rs.close();
@@ -91,6 +98,20 @@
                 %>
         </table>
             </div>
+        </div>
+        <div class="form">
+            <form action="cerrarpuja" method="POST" id="formRegUsuario">
+                <fieldset>
+                    <legend><span class="number"></span> Formulario de cierre de puja </legend>
+                    Escribe el numero del producto que deseas cerrar<input type="number"  id="numerodearticulo" class="form-input" name="numerodearticulo" placeholder=""  required ><br> 
+                    <table >
+                        <tr>
+                            <th><input type="submit" value="Enviar" id="btnRegistro"  /> </th>
+                           
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
         </div>
 
 

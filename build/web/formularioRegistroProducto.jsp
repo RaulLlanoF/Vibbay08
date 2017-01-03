@@ -2,6 +2,7 @@
     Document   : formularioRegistroProducto
     Created on : 26-dic-2016, 18:35:38
     Author     : Raúl
+<input name="precio" id="precio" min="10"  class="form-input" value="" type="number" step="0.01" >
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -50,7 +51,7 @@
                         <option value="Deporte">Deporte</option>
                         <option value="Hogar">Hogar</option>
                     </select>
-                    <p>Seleccione el precio inicial</p><input name="precio" id="precio" min="10"  class="form-input" value="" type="number" step="0.01" >
+                    <p>Seleccione el precio inicial</p><input name="precio" id="precio"  class="form-input" type="number" step="0.01" value="" >
                     <p>Arrastre la foto su producto al siguiente recuadro:</p>
                     <div class="imagenUsuario"   id="caja"></div>
                     <table >
