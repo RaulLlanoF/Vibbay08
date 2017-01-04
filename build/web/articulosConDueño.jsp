@@ -113,6 +113,23 @@
                 </fieldset>
             </form>
         </div>
+          <div class="form">
+              <form action="consultarPujas.jsp" method="POST" id="formRegUsuario">
+                <fieldset>
+                    <legend><span class="number"></span> Formulario Consulta de Pujas </legend>
+                    Escribe el numero del producto para el que quieres consultarlas pujas<input type="number"  id="consultarpujas" class="form-input" name="consultarpujas" placeholder=""  required ><br> 
+                    <table >
+                        <tr>
+                            <th><input type="submit" value="Enviar" id="btnRegistro"  /> </th>
+                           
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+        
+        
+        
 
 
 

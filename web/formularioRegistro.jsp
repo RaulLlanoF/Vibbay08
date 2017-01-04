@@ -28,8 +28,8 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="inicioSesion.html">Acceder</a></li>
-                   <li><a href="formularioRegistro.html">Registrarse</a></li>
+                    <li><a href="inicioSesion.jsp">Acceder</a></li>
+                   <li><a href="formularioRegistro.jsp">Registrarse</a></li>
                 </ul>
             </nav>
         </header>
