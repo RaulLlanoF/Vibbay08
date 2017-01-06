@@ -23,6 +23,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/cabeceraCss.css" rel="stylesheet" type="text/css">
         <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css"> 
+        <link rel="stylesheet" href="CSS/formularioRegistroProductoCss.css">
        <!-- <script type="text/javascript" src="JavaScript/paginaArticulosConDueño.js"></script>-->
         <title>JSP Page</title>
     </head>
@@ -39,7 +40,7 @@
                 </ul>
             </nav>
         </header>
-        <div class="form">
+        <div class="form1">
             <div id="elements">
         <table >
             <tr><td><b>Numero Producto</b></td><td><b>Nombre Producto</b></td><td><b>Categoria</b></td><td><b>Descripcion</b></td><td><b>Precio</b></td><td><b>Foto</b></td><td><b>Situacion</b></td></tr>

@@ -24,6 +24,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/cabeceraCss.css" rel="stylesheet" type="text/css">
         <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="JavaScript/registroPuja.js"></script>
+        <link rel="stylesheet" href="CSS/formularioRegistroProductoCss.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -41,7 +43,7 @@
         </header>
         
         <%String categoriaB = request.getParameter("categoria");%>
-        <div class="form">
+        <div class="form1">
             <div id="elements">
         <table >
             <tr><td><b>Numero&nbsp;Producto&nbsp;&nbsp;&nbsp;</b></td><td><b>Nombre&nbsp;Producto&nbsp;&nbsp;&nbsp;</b></td><td><b>Categoria&nbsp;&nbsp;&nbsp;</b></td><td><b>Descripcion&nbsp;&nbsp;&nbsp;</b></td><td><b>Precio&nbsp;&nbsp;&nbsp;</b></td><td><b>Foto</b></td></tr>
@@ -99,14 +101,14 @@
             </div>
         </div>
         <div class="form">
-            <form action="registrarpuja" method="POST" id="formRegUsuario">
+            <form action="registrarpuja" method="POST" id="formRegPuja">
                 <fieldset>
                     <legend><span class="number"></span> Formulario de puja</legend>
                     Escribe el numero del producto que deseas<input type="number"  id="numerodearticulo" class="form-input" name="numerodearticulo" placeholder=""  required ><br>
                     Escribe el precio que estas dispuesto a pagar<input type="number" id="puja" class="form-input" name="puja" placeholder=""  required> 
                     <table >
                         <tr>
-                            <th><input type="submit" value="Enviar" id="btnRegistro"  /> </th>
+                            <th><input type="button" value="Enviar" id="btnRegistroPuja"  /> </th>
                            
                         </tr>
                     </table>

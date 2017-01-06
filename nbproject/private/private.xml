@@ -4,9 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/articulosConDueño.jsp</file>
-            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/consultarPujas.jsp</file>
-            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/MenuUsuario.jsp</file>
-            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/misPujas.jsp</file>
+            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/formularioRegistroProducto.jsp</file>
+            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/src/java/Servlet/RegistrarPuja.java</file>
+            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/JavaScript/registroPuja.js</file>
+            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/CSS/listaArticulosCss.css</file>
+            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/CSS/formularioRegistroProductoCss.css</file>
+            <file>file:/C:/Users/Raúl/Documents/SistemasWebProjects/Vibbay08/web/busquedaRegistrada.jsp</file>
         </group>
     </open-files>
 </project-private>

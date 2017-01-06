@@ -42,7 +42,7 @@
             <form action="registrarobjetos" id="formRegProducto" enctype="multipart/form-data" method="post">
                 <fieldset>
                     <legend><span class="number"></span> Formulario de Registro De Articulo</legend>
-                    <input type="text" name="nombreproducto" id="nombreproducto" class="form-input" placeholder="Escribe el nombre del producto" required >
+                    Nombre del Articulo:<input type="text" name="nombreproducto" id="nombreproducto" class="form-input" placeholder="Escribe el nombre del producto" required >
                     Foto:<input type="file" name="foto1" id="foto1" class="form-input" >
                     <textarea name="descripcion" id="descripcion" class="form-input" rows="5" placeholder="Escribe la descripcción del producto"></textarea>
 
