@@ -135,6 +135,7 @@ public class Consultas extends Conexion {
         }
         return false;
     }
+  
     
     public boolean registrarPuja(int idproducto, float preciopuja, String pujante){
         PreparedStatement pst = null;

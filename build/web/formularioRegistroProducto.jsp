@@ -18,7 +18,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro Producto</title>
         <link rel="stylesheet" href="CSS/formularioRegistroProductoCss.css">
         <script type="text/javascript" src="JavaScript/dragAndDrop1.js"></script>
         <link href="CSS/cabeceraCss.css" type="text/css" rel="stylesheet">
@@ -29,7 +29,7 @@
         <header>
             <a href="index.jsp">
                 <!-- <em><img src="IMG/CoolClips_vc026403.png"/></em>-->
-                <em>Vibbay <% out.println(email); %></em>
+                <em>Vibbay</em>
             </a>
             <nav>
                 <ul>
@@ -52,12 +52,12 @@
                         <option value="Hogar">Hogar</option>
                     </select>
                     <p>Seleccione el precio inicial</p><input name="precio" id="precio"  class="form-input" type="number" step="0.01" value="" >
-                    <p>Arrastre la foto su producto al siguiente recuadro:</p>
-                    <div class="imagenUsuario"   id="caja"></div>
+                    <!--<p>Arrastre la foto su producto al siguiente recuadro:</p>
+                    <div class="imagenUsuario"   id="caja"></div>-->
                     <table >
                         <tr>
                             <th><input type="button" id="btnRegistroProducto" value="Enviar"  /> </th>
-                            <th><input type="button"  value="Volver" onclick = "location = 'index.jsp'"/></th>
+                            <th><input type="button"  value="Volver" onclick = "location = 'MenuUsuario.jsp'"/></th>
                         </tr>
                     </table>
                 </fieldset>

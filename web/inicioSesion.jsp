@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Inicio Sesion</title>
         <link href="CSS/inicioSesionCss.css" type="text/css" rel="stylesheet" >
         <link href="CSS/cabeceraCss.css" type="text/css" rel="stylesheet">
         <script src="JavaScript/ValidacionInicioSesion.js" language="javascript" type="text/javascript">  </script>
@@ -33,8 +33,8 @@
             <form action="iniciar" method="POST" id="formRegUsuario">
                 <fieldset>
                     <legend><span class="number"></span> Inicia Sesion</legend>
-                    <input type="email" id="email" class="form-input" name="email" placeholder="Escribe tu email *" required>
-                    <input type="password" name="contrasena" id="contrasena" class="form-input" placeholder="Escribe tu contraseña" required >                    
+                    Email<input type="email" id="email" class="form-input" name="email" placeholder="Escribe tu email *" required>
+                    Contraseña<input type="password" name="contrasena" id="contrasena" class="form-input" placeholder="Escribe tu contraseña" required >                    
                     <table >
                         <tr>
                             <th><input type="button" value="Enviar" id="btnInicio"    /> </th>

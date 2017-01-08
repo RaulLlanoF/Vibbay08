@@ -38,11 +38,11 @@
             <form action="registrar" method="POST" id="formRegUsuario">
                 <fieldset>
                     <legend><span class="number"></span> Formulario de Registro</legend>
-                    <input type="text"  id="nombre" class="form-input" name="nombre" placeholder="Escribe tu nombre" pattern="[A-Za-z]{3,}" required >
-                    <input type="tel" id="telefono" class="form-input" name="telefono" placeholder="Escribe tu telefono"  required>
-                    <input type="email" id="email" class="form-input" name="email" placeholder="Escribe tu email *" required>
-                    <input type="password" name="contrasena" id="contrasena" class="form-input" placeholder="Escribe tu contraseña" required >
-                    <input type="date" name="fechanacimiento" class="form-input" id="fechanacimiento" required >
+                    Nombre<input type="text"  id="nombre" class="form-input" name="nombre" placeholder="Escribe tu nombre" pattern="[A-Za-z]{3,}" required >
+                    Telefono<input type="tel" id="telefono" class="form-input" name="telefono" placeholder="Escribe tu telefono"  required>
+                    Email<input type="email" id="email" class="form-input" name="email" placeholder="Escribe tu email *" required>
+                    Contraseña<input type="password" name="contrasena" id="contrasena" class="form-input" placeholder="Escribe tu contraseña" required >
+                    Fecha de nacimiento<input type="date" name="fechanacimiento" class="form-input" id="fechanacimiento" required >
                     
                     <table >
                         <tr>

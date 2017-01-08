@@ -17,7 +17,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/cabeceraCss.css" rel="stylesheet" type="text/css">
         <link href="CSS/listaArticulosCss.css" rel="stylesheet" type="text/css">
-        <title>JSP Page</title>
+        <title>Lista Articulos</title>
     </head>
     <body>
         <header>
@@ -60,6 +60,9 @@
                     String descripcion;
                     Float precio;
                     InputStream foto;
+                    //nueva
+                    OutputStream oImagen;
+                    //
                     set = con.createStatement();
                     rs = set.executeQuery("SELECT * FROM articulo where categoria='"+categoriaB+"'");
                     while (rs.next()) {
@@ -67,7 +70,14 @@
                         categoria = rs.getString("categoria");
                         descripcion = rs.getString("descripcion");
                         precio = rs.getFloat("precio");
-                        foto = rs.getBinaryStream("foto");
+                       foto = rs.getBinaryStream("foto");
+                        //nueva
+                       // byte array[] = rs.getBytes("foto");
+                        //response.setContentType("image/gif");
+                        //oImagen = response.getOutputStream();
+                        //oImagen.write(array);
+                        //oImagen.flush();
+                        //oImagen.close();
                         
             %>                         
             <tr><td><%=nombreproducto%></td>

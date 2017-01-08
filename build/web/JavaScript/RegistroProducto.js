@@ -56,7 +56,7 @@ function revisionGeneral() {
     }
 
     if (correcto) {
-          alert("11");
+          
         document.getElementById("formRegProducto").submit();
      
       
@@ -73,7 +73,7 @@ function revisarNombre() {
 }
 function revisarDescripcion() {
     var descripcion = document.getElementById("descripcion");
-    var ex = /^[\s\S]{10,20}$/;
+    var ex = /^[\s\S]{10,50}$/;
     if (!ex.test(descripcion.value) || descripcion.value === "")
         return false;
     else

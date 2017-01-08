@@ -24,6 +24,10 @@
         <servlet-name>CerrarPuja</servlet-name>
         <servlet-class>Servlet.CerrarPuja</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>pruebasImagen</servlet-name>
+        <servlet-class>Servlet.pruebasImagen</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>CerrarPuja</servlet-name>
         <url-pattern>/cerrarpuja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>pruebasImagen</servlet-name>
+        <url-pattern>/pruebasImagen</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
