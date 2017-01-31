@@ -19,19 +19,26 @@ function revisionGeneral() {
         correcto=false;
         nombre.className='error';
     }
-    var apellido = document.getElementById("apellidos");
-    if(!revisarApellido()){
-        correcto=false;
-        apellido.className='error';
-    }
     var contrasena = document.getElementById("contrasena");
     if(!revisarContrasena()){
         correcto=false;
         contrasena.className='error';
     }
+    var telefono = document.getElementById("telefono");
+    if (!revisarTelefono()){
+        correcto=false;
+        telefono.className='error';
+    }
+    var fechanacimiento = document.getElementById("fechanacimiento");
+    if (!revisarFecha()){
+        correcto = false;
+        fechanacimiento.className='error';
+    }
+    
     if(correcto){
         document.getElementById("formRegUsuario").submit();
-        alert("11");
+        document.location.href = "index.jsp";
+        //alert("11");
     }
     }
 function revisarEmail () {
@@ -54,15 +61,37 @@ function revisarNombre() {
 
 function revisarContrasena() {
     var contrasena = document.getElementById("contrasena");
-    if(contrasena.value==="" || contrasena===null)
+    var ex = /[A-Za-z0-9!?-]{3,12}/;
+    if(!ex.test(contrasena.value) || contrasena===null)
         return false;
     else
         return true;
 }
-
+function revisarTelefono(){
+    var telefono = document.getElementById("telefono");
+    var ex = /^[9|6|7][0-9]{8}$/;
+    if(!ex.test(telefono.value)|| telefono==null)
+        return false;
+    else
+        return true;
+}
+function revisarFecha(){
+    var fechanacimiento = document.getElementById("fechanacimiento");
+    var hoy = new Date();
+    var fechaIntroducida;
+    
+    if(fechanacimiento != "")
+        fechaIntroducida = new Date(fechanacimiento.value);
+    
+    if(fechaIntroducida>hoy || fechanacimiento.value == "" || fechaIntroducida.getUTCDate() == hoy.getUTCDate())
+        return false;
+    else
+        return true;
+}
 function revisar(){
     document.getElementById("btnRegistro").addEventListener("click", revisionGeneral, false);
-    var email = document.getElementById("email");
+    var email = document.getElementById("email");    document.getElementById("btnRegistro").addEventListener("click", revisionGeneral, false);
+
     email.oninput = function() {
         if(!revisarEmail())
             email.className='error';
@@ -85,5 +114,20 @@ function revisar(){
             contrasena.className='error';
         else
             contrasena.className='form-input';
+    }
+    var telefono = document.getElementById("telefono");
+    telefono.oninput = function(){
+        if(!revisarTelefono())
+            telefono.className='error';
+        else
+            telefono.className='form-input';
+        
+    }
+    var fechanacimiento = document.getElementById("fechanacimiento");
+    fechanacimiento.oninput = function(){
+        if(!revisarFecha())
+            fechanacimiento.className='error';
+        else
+            fechanacimiento.className='form-input';
     }
 }
